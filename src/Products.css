@@ -1,0 +1,123 @@
+/* Base layout and body */
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Container */
+.all-products-container {
+    
+    margin-top: 56px;
+
+}
+
+/* Title */
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+    position: relative;
+}
+
+.page-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* Loading / error messages */
+.status-text {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.error-text {
+    color: #ff4d4f;
+}
+
+/* Product grid */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+/* Individual card */
+.product-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.product-card img {
+    width: 110%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+    background-size: cover;
+}
+
+/* Title */
+.product-card h2 {
+    font-size: 1.1rem;
+    margin: 1rem 1rem 0.5rem;
+    color: #222;
+    min-height: 48px;
+    line-height: 1.4;
+}
+
+/* Description */
+.product-desc {
+    margin: 0 1rem 0.5rem;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Price */
+.product-price {
+    margin: 0 1rem 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Button */
+.view-btn {
+    margin: 0 1rem 1rem;
+    padding: 0.6rem 1rem;
+    border: none;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.view-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+    transform: scale(1.03);
+}

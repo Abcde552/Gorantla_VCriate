@@ -1,49 +1,16 @@
-import React, { useContext } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import Navbars from "./Navbars";
-import Home from "./Home";
-import DetailedView from "./DetailedView";
-import Cart from "./Cart";
-import Products from "./Products";
-import Signup from "./Signup";
-import Login from "./Login";
-import ProtectedRoute from "./Protectedroute";
-import { EcomContext } from "./context";
-// import { EcomProvider } from "./context";
+import TemplateBuilder from "./TemplateBuilder";
 
-const App = () => {
-  // const login = true
-  const { login } = useContext(EcomContext);
-
+export default function App() {
   return (
-    <BrowserRouter>
-      {/* <EcomProvider> */}
-      <Navbars />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <ProtectedRoute>
-              <Home />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/Totalproducts" element={<Products />} />
-        <Route path="/product/:id" element={<DetailedView />} />
-        <Route
-          path="/cart"
-          element={
-            <ProtectedRoute>
-              <Cart />
-            </ProtectedRoute>
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+    <center>
+    <div className="min-h-screen bg-gray-50 font-sans">
+      <header className="flex justify-between items-center p-6 bg-white shadow-md">
+        <h1 className="text-xl font-medium">My Workspace / Job Application</h1>
+    
+      </header>
+      <TemplateBuilder />
+    </div>
+    </center>
   );
-};
-
-export default App;
+}

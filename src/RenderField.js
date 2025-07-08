@@ -11,6 +11,7 @@ export default function RenderField({ field }) {
     if (file) {
       const imageUrl = URL.createObjectURL(file);
       setPreviewImage(imageUrl);
+      
     }
   };
 
